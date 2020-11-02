@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcf88a3c-e874-4c0a-96c9-6d259a45b473" name="Default Changelist" comment="" />
+    <list default="true" id="fcf88a3c-e874-4c0a-96c9-6d259a45b473" name="Default Changelist" comment="Added IDEA Data">
+      <change afterPath="$PROJECT_DIR$/.idea/Vertretungsplan-API.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/applications/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aushang.php" beforeDir="false" afterPath="$PROJECT_DIR$/aushang.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aushang/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/aushang/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/klausuren.php" beforeDir="false" afterPath="$PROJECT_DIR$/klausuren.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/klausuren/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/klausuren/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vertretungsplan.php" beforeDir="false" afterPath="$PROJECT_DIR$/vertretungsplan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vertretungsplan/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/vertretungsplan/index.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,7 +44,13 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Nils Witt &lt;nils@nils-witt.de&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="ProjectId" id="1jkO9SrzmYyJnnCeN7ulhwaWmE5" />
   <component name="ProjectViewState">
@@ -37,18 +76,46 @@
       <option name="presentableId" value="Default" />
       <updated>1604344472201</updated>
       <workItem from="1604344474082" duration="3000" />
-      <workItem from="1604344500311" duration="19000" />
+      <workItem from="1604344500311" duration="335000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Added IDEA Data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added IDEA Data" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="880" y="373" key="#Deployment" timestamp="1604344518391">
       <screen x="0" y="23" width="2560" height="1369" />
     </state>
     <state x="880" y="373" key="#Deployment/2560.116.1920.1057/0.23.2560.1369@0.23.2560.1369" timestamp="1604344518391" />
+    <state x="886" y="301" key="CommitChangelistDialog2" timestamp="1604344809180">
+      <screen x="0" y="23" width="2560" height="1369" />
+    </state>
+    <state x="886" y="301" key="CommitChangelistDialog2/2560.116.1920.1057/0.23.2560.1369@0.23.2560.1369" timestamp="1604344809180" />
+    <state x="254" y="149" key="DiffContextDialog" timestamp="1604344688543">
+      <screen x="0" y="23" width="2560" height="1369" />
+    </state>
+    <state x="254" y="149" key="DiffContextDialog/2560.116.1920.1057/0.23.2560.1369@0.23.2560.1369" timestamp="1604344688543" />
+    <state x="1039" y="417" key="RollbackChangesDialog" timestamp="1604344689354">
+      <screen x="0" y="23" width="2560" height="1369" />
+    </state>
+    <state x="1039" y="417" key="RollbackChangesDialog/2560.116.1920.1057/0.23.2560.1369@0.23.2560.1369" timestamp="1604344689354" />
     <state x="1187" y="445" key="ftp.server.browser" timestamp="1604344517568">
       <screen x="0" y="23" width="2560" height="1369" />
     </state>
