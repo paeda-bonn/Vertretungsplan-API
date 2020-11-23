@@ -1,0 +1,21 @@
+<?php
+
+
+class SQLConfig
+{
+    private $username = "k138796_vplan";
+    private $password = "_In9eh12";
+    private $charset = "utf8";
+    //private $host = "10.35.46.140";
+    private $host = "db.moodle-paeda.de";
+    private $database = "k138796_vplan";
+
+    /**
+     * @return PDO
+     */
+    function getPDO()
+    {
+        return new PDO('mysql:host='.$this->host.';dbname='.$this->database.';charset='.$this->charset, $this->username, $this->password);
+    }
+
+}
