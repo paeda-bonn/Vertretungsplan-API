@@ -6,13 +6,14 @@ class JWTInterface
 {
     private $privateKey;
     private $publicKey;
+
     /**
      * JWTInterface constructor.
      */
     public function __construct()
     {
-        $this->privateKey = file_get_contents(__DIR__.'/../config/privkey.pem');
-        $this->publicKey = file_get_contents(__DIR__.'/../config/pubkey.pem');
+        $this->privateKey = file_get_contents(__DIR__ . '/../config/privkey.pem');
+        $this->publicKey = file_get_contents(__DIR__ . '/../config/pubkey.pem');
     }
 
     /**
@@ -20,7 +21,8 @@ class JWTInterface
      * @param $type - type of the user
      * @return string - new Token
      */
-    public function issueToken($username, $type){
+    public function issueToken($username, $type)
+    {
         $token = array(
             "iss" => "vplan.moodle-paeda.de",
             "aud" => "vplan.moodle-paeda.de",
@@ -35,12 +37,12 @@ class JWTInterface
      * @param $token
      * @return bool
      */
-    public function verifyToken($token){
+    public function verifyToken($token)
+    {
         try {
-            $decoded = JWT::decode($token, $this->publicKey, array('RS256'));
-            //Validation Succeded
+            JWT::decode($token, $this->publicKey, array('RS256'));
             return true;
-        }catch (Exception $e){
+        } catch (Exception $e) {
             echo $e;
             //Validation failed
             return false;

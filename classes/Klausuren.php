@@ -3,10 +3,6 @@
 class Klausuren
 {
     private $sqlConn;
-    private $upcoming;
-    private $active;
-    private $date;
-    private $teacher;
 
 
     function __construct($conn)
@@ -16,31 +12,29 @@ class Klausuren
 
     public function setUpcoming()
     {
-        $this->upcoming = "true";
+        $upcoming = "true";
     }
 
     public function setActive()
     {
-        $this->active = "x";
+        $active = "x";
     }
 
     public function setDate($date)
     {
-        $this->date = $date;
+        $date1 = $date;
     }
 
     public function setTeacher($teacher)
     {
-        $this->teacher = $teacher;
+        $teacher1 = $teacher;
     }
 
     public function loadPayloadToArray()
     {
 
         $json = file_get_contents("php://input");
-        $array = json_decode($json, true);
-
-        return $array;
+        return json_decode($json, true);
     }
 
     public function editJsonPayload($data)
@@ -74,6 +68,13 @@ class Klausuren
 
     //GET
 
+    public function getAll()
+    {
+        $stmt = $this->sqlConn->prepare("SELECT * FROM klausuren2 ");
+        $stmt->execute();
+        return $this->formatArray($stmt->fetchAll(PDO::FETCH_CLASS));
+    }
+
     private function formatArray($data)
     {
         for ($i = 0; $i < sizeof($data); $i++) {
@@ -85,13 +86,6 @@ class Klausuren
             $data[$i] = $dataset;
         }
         return $data;
-    }
-
-    public function getAll()
-    {
-        $stmt = $this->sqlConn->prepare("SELECT * FROM klausuren2 ");
-        $stmt->execute();
-        return $this->formatArray($stmt->fetchAll(PDO::FETCH_CLASS));
     }
 
     public function getActive()

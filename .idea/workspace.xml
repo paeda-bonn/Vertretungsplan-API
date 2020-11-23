@@ -20,28 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcf88a3c-e874-4c0a-96c9-6d259a45b473" name="Default Changelist" comment="Added IDEA Data">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/Authorisation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/JWTInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classes/Userbase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/Config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/SQLConfig.php.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/genKeys.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hashPassword.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Vertretungsplan-API.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Vertretungsplan-API.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applications/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aushang.php" beforeDir="false" afterPath="$PROJECT_DIR$/aushang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aushang/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Aushang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.dist.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/klausuren.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/klausuren/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Klausuren.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vertretungsplan.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vertretungsplan/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Vertretungsplan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/Aushang.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Aushang.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/Authorisation.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Authorisation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/Klausuren.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Klausuren.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/SQLConfig.php.example" beforeDir="false" afterPath="$PROJECT_DIR$/config/SQLConfig.php.example" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +35,7 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable path="composer" />
@@ -104,6 +88,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/config" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -116,6 +101,19 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LocalServer" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="3000">
       <method v="2" />
     </configuration>
@@ -132,7 +130,61 @@
       <workItem from="1604344500311" duration="335000" />
       <workItem from="1606050065976" duration="17068000" />
       <workItem from="1606074931167" duration="1579000" />
+      <workItem from="1606108547160" duration="783000" />
+      <workItem from="1606138231602" duration="13000" />
+      <workItem from="1606138255938" duration="4669000" />
+      <workItem from="1606150146491" duration="2079000" />
     </task>
+    <task id="LOCAL-00001" summary="updated Configs and envs">
+      <created>1606108702869</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606108702869</updated>
+    </task>
+    <task id="LOCAL-00002" summary="updated auth process">
+      <created>1606108758962</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606108758962</updated>
+    </task>
+    <task id="LOCAL-00003" summary="updated vplan component">
+      <created>1606108829642</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606108829642</updated>
+    </task>
+    <task id="LOCAL-00004" summary="updated klausuren component">
+      <created>1606108848211</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606108848211</updated>
+    </task>
+    <task id="LOCAL-00005" summary="updated router file">
+      <created>1606108863250</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1606108863250</updated>
+    </task>
+    <task id="LOCAL-00006" summary="updated project files">
+      <created>1606108909046</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1606108909046</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added Aushang paths">
+      <created>1606163616670</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1606163616670</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,7 +205,14 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="Added IDEA Data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added IDEA Data" />
+    <MESSAGE value="updated Configs and envs" />
+    <MESSAGE value="updated auth process" />
+    <MESSAGE value="updated vplan component" />
+    <MESSAGE value="updated klausuren component" />
+    <MESSAGE value="updated router file" />
+    <MESSAGE value="updated project files" />
+    <MESSAGE value="added Aushang paths" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Aushang paths" />
   </component>
   <component name="WindowStateProjectService">
     <state x="880" y="373" key="#Deployment" timestamp="1606062965135">
@@ -181,14 +240,18 @@
       <screen x="0" y="25" width="2560" height="1361" />
     </state>
     <state x="966" y="512" key="#com.intellij.fileTypes.FileTypeChooser/2560.118.1920.1055/0.25.2560.1361@0.25.2560.1361" timestamp="1606075282680" />
-    <state x="1093" y="425" key="#com.intellij.ide.util.MemberChooser" timestamp="1606070520109">
+    <state x="1093" y="425" key="#com.intellij.ide.util.MemberChooser" timestamp="1606147869534">
       <screen x="0" y="25" width="2560" height="1361" />
     </state>
-    <state x="1093" y="425" key="#com.intellij.ide.util.MemberChooser/2560.118.1920.1055/0.25.2560.1361@0.25.2560.1361" timestamp="1606070520109" />
-    <state x="1018" y="456" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606062785382">
+    <state x="1093" y="425" key="#com.intellij.ide.util.MemberChooser/2560.118.1920.1055/0.25.2560.1361@0.25.2560.1361" timestamp="1606147869534" />
+    <state x="1018" y="456" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606163561567">
       <screen x="0" y="25" width="2560" height="1361" />
     </state>
-    <state x="1018" y="456" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/2560.118.1920.1055/0.25.2560.1361@0.25.2560.1361" timestamp="1606062785382" />
+    <state x="1018" y="456" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/2560.118.1920.1055/0.25.2560.1361@0.25.2560.1361" timestamp="1606163561567" />
+    <state x="1029" y="564" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1606163640796">
+      <screen x="0" y="25" width="2560" height="1361" />
+    </state>
+    <state x="1029" y="564" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/2560.118.1920.1055/0.25.2560.1361@0.25.2560.1361" timestamp="1606163640796" />
     <state x="886" y="301" key="CommitChangelistDialog2" timestamp="1604344809180">
       <screen x="0" y="23" width="2560" height="1369" />
     </state>
@@ -205,26 +268,26 @@
       <screen x="0" y="23" width="2560" height="1369" />
     </state>
     <state x="254" y="149" key="DiffContextDialog/2560.116.1920.1057/0.23.2560.1369@0.23.2560.1369" timestamp="1604344688543" />
-    <state width="1259" height="367" key="GridCell.Tab.0.bottom" timestamp="1606077551584">
+    <state width="1259" height="255" key="GridCell.Tab.0.bottom" timestamp="1606149442510">
       <screen x="0" y="25" width="2560" height="1361" />
     </state>
-    <state width="1259" height="367" key="GridCell.Tab.0.bottom/2560.118.1920.1055/0.25.2560.1361@0.25.2560.1361" timestamp="1606077551584" />
-    <state width="1259" height="367" key="GridCell.Tab.0.center" timestamp="1606077551580">
+    <state width="1259" height="255" key="GridCell.Tab.0.bottom/2560.118.1920.1055/0.25.2560.1361@0.25.2560.1361" timestamp="1606149442510" />
+    <state width="1259" height="255" key="GridCell.Tab.0.center" timestamp="1606149442509">
       <screen x="0" y="25" width="2560" height="1361" />
     </state>
-    <state width="1259" height="367" key="GridCell.Tab.0.center/2560.118.1920.1055/0.25.2560.1361@0.25.2560.1361" timestamp="1606077551580" />
-    <state width="1259" height="367" key="GridCell.Tab.0.left" timestamp="1606077551579">
+    <state width="1259" height="255" key="GridCell.Tab.0.center/2560.118.1920.1055/0.25.2560.1361@0.25.2560.1361" timestamp="1606149442509" />
+    <state width="1259" height="255" key="GridCell.Tab.0.left" timestamp="1606149442509">
       <screen x="0" y="25" width="2560" height="1361" />
     </state>
-    <state width="1259" height="367" key="GridCell.Tab.0.left/2560.118.1920.1055/0.25.2560.1361@0.25.2560.1361" timestamp="1606077551579" />
-    <state width="1259" height="367" key="GridCell.Tab.0.right" timestamp="1606077551582">
+    <state width="1259" height="255" key="GridCell.Tab.0.left/2560.118.1920.1055/0.25.2560.1361@0.25.2560.1361" timestamp="1606149442509" />
+    <state width="1259" height="255" key="GridCell.Tab.0.right" timestamp="1606149442509">
       <screen x="0" y="25" width="2560" height="1361" />
     </state>
-    <state width="1259" height="367" key="GridCell.Tab.0.right/2560.118.1920.1055/0.25.2560.1361@0.25.2560.1361" timestamp="1606077551582" />
-    <state x="1011" y="435" key="NewPhpClassDialog" timestamp="1606066090074">
+    <state width="1259" height="255" key="GridCell.Tab.0.right/2560.118.1920.1055/0.25.2560.1361@0.25.2560.1361" timestamp="1606149442509" />
+    <state x="1011" y="435" key="NewPhpClassDialog" timestamp="1606146705791">
       <screen x="0" y="25" width="2560" height="1361" />
     </state>
-    <state x="1011" y="435" key="NewPhpClassDialog/2560.118.1920.1055/0.25.2560.1361@0.25.2560.1361" timestamp="1606066090074" />
+    <state x="1011" y="435" key="NewPhpClassDialog/2560.118.1920.1055/0.25.2560.1361@0.25.2560.1361" timestamp="1606146705791" />
     <state x="1101" y="633" key="NewPhpFileDialog" timestamp="1606066867749">
       <screen x="0" y="25" width="2560" height="1361" />
     </state>
@@ -238,14 +301,14 @@
       <screen x="0" y="25" width="2560" height="1361" />
     </state>
     <state width="659" height="441" key="SqlResolveConfigurable/2560.118.1920.1055/0.25.2560.1361@0.25.2560.1361" timestamp="1606052332492" />
-    <state x="880" y="442" key="Vcs.Push.Dialog.v2" timestamp="1606062773972">
+    <state x="880" y="442" key="Vcs.Push.Dialog.v2" timestamp="1606108915427">
       <screen x="0" y="25" width="2560" height="1361" />
     </state>
-    <state x="880" y="442" key="Vcs.Push.Dialog.v2/2560.118.1920.1055/0.25.2560.1361@0.25.2560.1361" timestamp="1606062773972" />
-    <state x="1098" y="447" width="490" height="445" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1606062242754">
+    <state x="880" y="442" key="Vcs.Push.Dialog.v2/2560.118.1920.1055/0.25.2560.1361@0.25.2560.1361" timestamp="1606108915427" />
+    <state x="1098" y="447" width="490" height="445" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1606146632280">
       <screen x="0" y="25" width="2560" height="1361" />
     </state>
-    <state x="1098" y="447" width="490" height="445" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/2560.118.1920.1055/0.25.2560.1361@0.25.2560.1361" timestamp="1606062242754" />
+    <state x="1098" y="447" width="490" height="445" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/2560.118.1920.1055/0.25.2560.1361@0.25.2560.1361" timestamp="1606146632280" />
     <state x="1086" y="623" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606063628978">
       <screen x="0" y="25" width="2560" height="1361" />
     </state>

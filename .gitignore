@@ -1,3 +1,4 @@
 /config/SQLConfig.php
 /config/privkey.pem
 /config/pubkey.pem
+/vendor/

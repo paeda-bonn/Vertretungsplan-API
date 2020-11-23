@@ -3,12 +3,11 @@
 
 class SQLConfig
 {
-    private $username = "k138796_vplan";
-    private $password = "_In9eh12";
+    private $username = "user";
+    private $password = "pass";
     private $charset = "utf8";
-    //private $host = "10.35.46.140";
-    private $host = "db.moodle-paeda.de";
-    private $database = "k138796_vplan";
+    private $host = "host";
+    private $database = "db";
 
     /**
      * @return PDO

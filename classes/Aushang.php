@@ -7,7 +7,6 @@ class Aushang
     /**
      * Aushang constructor.
      * @param $conn
-     * @param $config
      */
     public function __construct($conn)
     {
@@ -15,13 +14,27 @@ class Aushang
     }
 
     /**
-     * @return mixed
+     * @param $data
+     * @return false|string
      */
-    private function loadPayloadToArray()
+    public function create($data)
     {
-        $json = file_get_contents("php://input");
-        $array = json_decode($json, true);
-        return $array;
+        $event = new AushangEvent($data["content"], $data["color"], $data["display"], $data["type"]);
+        $stmt = $this->conn->prepare("INSERT INTO aushang2 (type, color, content, `order`, displaying) VALUES ( :type, :color, :content, :order, :display);");
+
+        $order = "99999999";
+        $display = true;
+
+        $stmt->bindParam(':type', $event->getType());
+        $stmt->bindParam(':color', $event->getColor());
+        $stmt->bindParam(':content', json_encode($event->getContent()));
+
+        $stmt->bindParam(':order', $order);
+        $stmt->bindParam(':display', $display);
+
+        $stmt->execute();
+        $this->order($event->getType());
+        return json_encode($event);
     }
 
     /**
@@ -48,30 +61,7 @@ class Aushang
     }
 
     /**
-     * @param $event
-     * @return false|string
-     */
-    public function create($data)
-    {
-        $event = new AushangEvent($data["content"], $data["color"], $data["display"], $data["type"]);
-        $stmt = $this->conn->prepare("INSERT INTO aushang2 (type, color, content, `order`, displaying) VALUES ( :type, :color, :content, :order, :display);");
-
-        $order = "99999999";
-        $display = true;
-
-        $stmt->bindParam(':type', $event->getType());
-        $stmt->bindParam(':color', $event->getColor());
-        $stmt->bindParam(':content', json_encode($event->getContent()));
-
-        $stmt->bindParam(':order', $order);
-        $stmt->bindParam(':display', $display);
-
-        $stmt->execute();
-        $this->order($event->getType());
-        return json_encode($event);
-    }
-
-    /**
+     * @param int $id
      * @return mixed
      */
     public function deleteById(int $id)
@@ -82,6 +72,7 @@ class Aushang
     }
 
     /**
+     * @param $event
      * @return mixed
      */
     public function update($event)
@@ -134,7 +125,8 @@ class Aushang
     }
 
     /**
-     * @param $type
+     * @param $id
+     * @param $direction
      * @return string
      */
     public function updateOrder($id, $direction)

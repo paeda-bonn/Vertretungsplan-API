@@ -55,7 +55,7 @@ class Authorisation
      * Validation wrapper for the JWToken
      * @param $key
      */
-    public function verifyKeyType($key,$user)
+    public function verifyKeyType($key)
     {
         if (!$this->jwtInterface->verifyToken($key)) {
             echo "auth error";
