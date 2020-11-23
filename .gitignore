@@ -1,1 +1,3 @@
-/config/config.php
+/config/SQLConfig.php
+/config/privkey.pem
+/config/pubkey.pem
