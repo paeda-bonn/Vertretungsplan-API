@@ -117,7 +117,7 @@ class Klausuren
     {
         $output = array();
 
-        $stmt = $this->sqlConn->prepare("INSERT INTO `klausuren2` (date, active, `from`, `to`, Stufe, Kurs, Lehrer, Raum, supervisors) VALUES ( :date, :active, :from, :to, :grade, :course, :teacher, :room, :supervisors);");
+        $stmt = $this->sqlConn->prepare("INSERT INTO `klausuren2` (date, active, `from`, `to`, grade, course, teacher, room, supervisors) VALUES ( :date, :active, :from, :to, :grade, :course, :teacher, :room, :supervisors);");
 
         foreach ($array as $dataset) {
             $stmt->bindParam(':date', $dataset["date"]);
@@ -134,14 +134,13 @@ class Klausuren
 
             $output[] = $stmt->errorInfo();
         }
-
         return $output;
     }
 
     //Delete
     public function deleteAll()
     {
-        $stmt = $this->sqlConn->prepare("DELETE FROM klausuren");
+        $stmt = $this->sqlConn->prepare("TRUNCATE klausuren2");
         return $stmt->execute();
     }
 }
