@@ -46,8 +46,8 @@ class Authorisation
     public function verifyKey($key)
     {
         if (!$this->jwtInterface->verifyToken($key)) {
-            echo "auth error";
-            die(401);
+            http_response_code(401);
+            die("401");
         }
     }
 
@@ -55,11 +55,11 @@ class Authorisation
      * Validation wrapper for the JWToken
      * @param $key
      */
-    public function verifyKeyType($key)
+    public function verifyKeyType($key,$type)
     {
         if (!$this->jwtInterface->verifyToken($key)) {
-            echo "auth error";
-            die(401);
+            http_response_code(401);
+            die("401");
         }
     }
 
