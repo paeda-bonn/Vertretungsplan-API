@@ -67,13 +67,13 @@ if ($method == "GET") {
     $authFramework->verifyKeyType($authKey, "admin");
     if ($path[0] == "vertretungsplan") {
         if ($path[1] == "vertretungen") {
-            $vertretungsplan->insertVertretungen($vertretungsplan->loadPayloadToArray());
+            echo json_encode($vertretungsplan->insertVertretungen($vertretungsplan->loadPayloadToArray()));
         } elseif ($path[1] == "activedates") {
             print_r($vertretungsplan->loadPayloadToArray());
             $vertretungsplan->setActiveDates($vertretungsplan->loadPayloadToArray());
         }
     } elseif ($path[0] == "klausuren") {
-        $res = $klausuren->insertArray($klausuren->loadPayloadToArray());
+        echo json_encode($klausuren->insertArray($klausuren->loadPayloadToArray()));
     } elseif ($path[0] == "aushang") {
         echo json_encode($aushang->create($vertretungsplan->loadPayloadToArray()));
     }
@@ -101,11 +101,11 @@ if ($method == "GET") {
         }
     } elseif ($path[0] == "klausuren") {
         if ($path[1] == "all") {
-            $klausuren->deleteAll();
+            echo $klausuren->deleteAll();
         }
     } elseif ($path[0] == "aushang") {
         if ($path[1] == "id") {
-            $aushang->deleteById("id");
+            $aushang->deleteById($path[2]);
         }
     }
 }
