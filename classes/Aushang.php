@@ -1,4 +1,5 @@
 <?php
+require_once 'AushangEvent.php';
 
 class Aushang
 {
@@ -20,17 +21,14 @@ class Aushang
     public function create($data)
     {
         $event = new AushangEvent($data["content"], $data["color"], $data["display"], $data["type"]);
-        $stmt = $this->conn->prepare("INSERT INTO aushang2 (type, color, content, `order`, displaying) VALUES ( :type, :color, :content, :order, :display);");
-
+        $stmt = $this->conn->prepare("INSERT INTO aushang2 (type, color, content, `order`, displaying) VALUES ( :type, :color, :content, :order, true);");
         $order = "99999999";
-        $display = true;
 
         $stmt->bindParam(':type', $event->getType());
         $stmt->bindParam(':color', $event->getColor());
         $stmt->bindParam(':content', json_encode($event->getContent()));
 
         $stmt->bindParam(':order', $order);
-        $stmt->bindParam(':display', $display);
 
         $stmt->execute();
         $this->order($event->getType());
