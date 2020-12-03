@@ -1,5 +1,5 @@
 ---
-name: Funktionen vorschlagen
+name: Funktionsvorschlag
 about: Hier kann eine neue bisher noch nicht vorhandene Funktion vorgeschlagen werden
 title: ''
 labels: 'German'
