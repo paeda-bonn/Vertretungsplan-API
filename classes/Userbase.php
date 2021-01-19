@@ -37,6 +37,7 @@ class Userbase
     }
 
     /**
+     * Generate Hash with echo password_hash("examplePW", PASSWORD_DEFAULT);
      * Validates the param password with the hash from the database
      * @param $password
      * @return bool - true-> valid, false-> invalid

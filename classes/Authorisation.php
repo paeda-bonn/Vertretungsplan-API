@@ -32,10 +32,12 @@ class Authorisation
 
                 return $this->jwtInterface->issueToken($username, $this->userbase->getType());
             } else {
+                http_response_code(401);
                 return "PW Error";
             }
         } else {
-            return "User: N/A";
+            http_response_code(401);
+            return "PW Error";
         }
     }
 

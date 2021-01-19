@@ -24,10 +24,11 @@ class JWTInterface
     public function issueToken($username, $type)
     {
         $token = array(
-            "iss" => "vplan.moodle-paeda.de",
+            "iss" => "vplan.moodle-paeda.de, Witt",
             "aud" => "vplan.moodle-paeda.de",
             "username" => $username,
             "usertype" => $type,
+            "expires" => (new DateTime)->getTimestamp() + (24 * 60 * 60)
         );
         return JWT::encode($token, $this->privateKey, 'RS256');
     }
@@ -35,18 +36,28 @@ class JWTInterface
     /**
      * Validates if a token is in a valid format and has a matching signature
      * @param $token
-     * @return bool
+     * @return object
+     * @throws InvalidTokenException
      */
     public function verifyToken($token)
     {
         try {
-            JWT::decode($token, $this->publicKey, array('RS256'));
-            return true;
-        } catch (Exception $e) {
-            echo $e;
-            //Validation failed
-            return false;
-        }
+            $data = JWT::decode($token, $this->publicKey, array('RS256'));
+            if ($data->expires < (new DateTime)->getTimestamp()) {
+                throw new ExpiredException();
+            } else {
+                return $data;
+            }
 
+            //return true;
+        } catch (Exception $e) {
+            //echo $e;
+            if ($e instanceof ExpiredException) {
+                throw new ExpiredException();
+            } else {
+                //Validation failed
+                throw new InvalidTokenException();
+            }
+        }
     }
 }
