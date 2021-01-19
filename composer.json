@@ -1,0 +1,9 @@
+{
+  "require": {
+    "fproject/php-jwt": "^4.0",
+    "ext-pdo": "*",
+    "ext-json": "*",
+    "lcobucci/jwt": "^3.4",
+    "edamov/pushok": "^0.12.0"
+  }
+}

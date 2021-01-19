@@ -1,0 +1,20 @@
+<?php
+
+
+class SQLConfig
+{
+    private $username = "user";
+    private $password = "pass";
+    private $charset = "utf8";
+    private $host = "host";
+    private $database = "db";
+
+    /**
+     * @return PDO
+     */
+    function getPDO()
+    {
+        return new PDO('mysql:host='.$this->host.';dbname='.$this->database.';charset='.$this->charset, $this->username, $this->password);
+    }
+
+}

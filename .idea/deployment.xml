@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="Vplan" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" serverName="Netcup" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
-      <paths name="Vplan">
+      <paths name="Netcup">
         <serverdata>
           <mappings>
-            <mapping deploy="/node/api" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/apiBeta" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
