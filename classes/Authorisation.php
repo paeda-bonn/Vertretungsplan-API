@@ -44,6 +44,7 @@ class Authorisation
     /**
      * Validation wrapper for the JWToken
      * @param $key
+     * @throws InvalidTokenException
      */
     public function verifyKey($key)
     {
@@ -56,12 +57,25 @@ class Authorisation
     /**
      * Validation wrapper for the JWToken
      * @param $key
+     * @throws InvalidTokenException
      */
     public function verifyKeyType($key,$type)
     {
-        if (!$this->jwtInterface->verifyToken($key)) {
-            http_response_code(401);
-            die("401");
+        try {
+            $data = $this->jwtInterface->verifyToken($key);
+            if($type != null){
+                if($data->usertype != $type){
+                    http_response_code(401);
+                    die("401");
+                }
+            }
+        }catch (Exception $e){
+            if($e instanceof \Firebase\JWT\ExpiredException){
+                http_response_code(401);
+                die("401");
+            }else{
+                echo $e;
+            }
         }
     }
 
