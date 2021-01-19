@@ -19,6 +19,7 @@ header('Content-Type: application/json');
 $method = $_SERVER["REQUEST_METHOD"];
 $path = explode("/", substr($_SERVER["PATH_INFO"], 1));
 $authKey = substr($_SERVER["HTTP_AUTHORIZATION"], 7);
+$push = new PushAPN();
 
 try {
     $config = new Config();
@@ -29,9 +30,6 @@ try {
     $klausuren = new Klausuren($pdo);
     $aushang = new Aushang($pdo);
 
-/*
- * Router
- */
 //GET
     if ($method == "GET") {
         if ($path[0] == "login") {
