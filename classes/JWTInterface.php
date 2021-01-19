@@ -1,5 +1,6 @@
 <?php
 
+use Firebase\JWT\ExpiredException;
 use Firebase\JWT\JWT;
 
 class JWTInterface

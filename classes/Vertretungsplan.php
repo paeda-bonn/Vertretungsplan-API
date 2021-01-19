@@ -23,7 +23,7 @@ class Vertretungsplan
      */
     public function getVertretungenByDate($date)
     {
-        $sql = "SELECT * FROM vertretungsdata WHERE Datum='" . $date . "'";
+        $sql = "SELECT * FROM vertretungsdata WHERE date='" . $date . "'";
         $vertretungen = [];
 
         foreach ($this->sqlConn->query($sql) as $row) {
@@ -157,27 +157,35 @@ class Vertretungsplan
     public function insertVertretungen($array)
     {
         $output = array();
-        $stmt = $this->sqlConn->prepare("INSERT INTO vertretungsdata (`id`, `Datum`, `Stunde`, `Lehrer`, `Kurs`,`Fach`, `LehrerNeu`, `RaumNew`, `FachNew`, `info`) VALUES (:id, :date, :lesson, :teacher, :class, :subject, :newTeacher, :newRoom, :newSubject, :info) ON DUPLICATE KEY UPDATE `Datum`= :date,`LehrerNeu`= :newTeacher,`RaumNew`= :newRoom, `FachNew`= :newSubject, `info`=:info");
+        $stmt = $this->sqlConn->prepare("INSERT INTO vertretungsdata (`date`, `lesson`, `teacher`, `course`,`subject`, `teacherNew`, `room`, `subjectNew`, `info`) VALUES (:date, :lesson, :teacher, :class, :subject, :newTeacher, :newRoom, :newSubject, :info) ON DUPLICATE KEY UPDATE `date`= :date,`teacherNew`= :newTeacher,`room`= :newRoom, `subjectNew`= :newSubject, `info`=:info");
 
         foreach ($array as $entry) {
-            $stmt->bindParam(':id', $entry["id"]);
             $stmt->bindParam(':date', $entry["date"]);
-            $stmt->bindParam(':lesson', $entry["lesson"]);
+
             $stmt->bindParam(':teacher', $entry["teacher"]);
-            $stmt->bindParam(':class', $entry["class"]);
+            $stmt->bindParam(':class', $entry["course"]);
             $stmt->bindParam(':subject', $entry["subject"]);
             $stmt->bindParam(':newTeacher', $entry["newTeacher"]);
-            if (is_array($entry["newRoom"])) {
-                $stmt->bindParam(':newRoom', $entry["newRoom"]);
+            if (is_array($entry["room"])) {
+                $stmt->bindParam(':newRoom', $entry["room"]);
             } else {
-                $stmt->bindParam(':newRoom', $entry["newRoom"]);
+                $stmt->bindParam(':newRoom', $entry["room"]);
             }
-
             $stmt->bindParam(':newSubject', $entry["newSubject"]);
             $stmt->bindParam(':info', $entry["info"]);
 
-            $output[] = $stmt->execute();
-            $output[] = $stmt->errorInfo();
+            if(isset($entry["lessons"])){
+                for ($i = 0; $i < sizeof($entry["lessons"]);$i++){
+                    $lesson = $entry["lessons"][$i];
+                    $stmt->bindParam(':lesson', $lesson);
+                    $output[] = $stmt->execute();
+                    $output[] = $stmt->errorInfo();
+                }
+            }else{
+                $stmt->bindParam(':lesson', $entry["lesson"]);
+                $output[] = $stmt->execute();
+                $output[] = $stmt->errorInfo();
+            }
         }
         return $output;
     }
