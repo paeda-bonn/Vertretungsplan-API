@@ -141,7 +141,7 @@ class Vertretungsplan
     public function deleteVertretungenByDay($array)
     {
         $output = array();
-        $stmt = $this->sqlConn->prepare("DELETE FROM vertretungsdata WHERE (`Datum` = :date);");
+        $stmt = $this->sqlConn->prepare("DELETE FROM vertretungsdata WHERE (`date` = :date);");
         foreach ($array as $date) {
             $stmt->bindParam(':date', $date);
             $output[$date] = $stmt->execute();

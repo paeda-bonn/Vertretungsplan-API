@@ -90,7 +90,8 @@ class Klausuren
 
     public function getActive()
     {
-        $stmt = $this->sqlConn->prepare("SELECT * FROM klausuren2 WHERE `active`=1 && date >= CURRENT_DATE()");
+        $timeElement = date('H:i',time());
+        $stmt = $this->sqlConn->prepare("SELECT * FROM klausuren2 WHERE `active`=1 && (date > CURRENT_DATE() ||(date = CURRENT_DATE() && `to`>='".$timeElement."'))");
         $stmt->execute();
         return $this->formatArray($stmt->fetchAll(PDO::FETCH_CLASS));
     }
